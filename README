@@ -1,0 +1,16 @@
+Simple Locator is a minimal helper script for the navigator.geolocation functions.
+
+It's main feature is the usage of watchLocation to continuously update the current location with the main purpose of getting accurate coordinates. The accuracy can be controlled with the threshold option.
+
+In addition to that, it supports reverse geocoding - just include the google maps api v3 and add the option google_geocoding : true
+
+Usage is pretty simple:
+
+simple_locator({
+	threshold: 25, // 25 meter minimum accuracy
+	running_callback: function(loc, loc_name) { }, // called every time the position or accuracy changes
+	finished_callback: function(loc, loc_name) { } // called as soon as accuracy < threshold
+});
+
+
+Extensions and bugfixes are very much appreciated!
